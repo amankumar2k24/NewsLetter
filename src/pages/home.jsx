@@ -12,7 +12,7 @@ import NewsLetterForm from "../component/home/NewsLetterForm";
 const Home = () => {
   return (
     <div className="bg-backgroundWhite ">
-      <div className="max-w-[1920px] mx-auto">
+      <div className="max-w-[1536px] container mx-auto">
         <Main />
         <MukhyaSamaChaar />
         <Rajneeti />

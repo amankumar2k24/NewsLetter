@@ -2,70 +2,10 @@ import React from "react";
 import MainHeading from "../MainHeading";
 import Box from "../Box";
 import ImgHolder from "../ImgHolder";
+import { rajneetiBoxData, RajneetiNewsData } from "../../data/data";
 
 const Rajneeti = () => {
-  const RajneetiNewsData = [
-    { id: "1", text: "कंगना रनौत के चुनाव को चुनौती, HC ने जारी किया नोटिस" },
-    {
-      id: "2",
-      text: "बीजेपी ने त्रिपुरा की 70% पंचायत सीटें निर्विरोध हासिल कर लीं",
-    },
-    {
-      id: "3",
-      text: "NEET पर SC के फैसले के बाद क्या राहुल गांधी माफी मांगेंगे: बीजेपी",
-    },
-    {
-      id: "4",
-      text: "कांग्रेस ने आंध्र के लिए केंद्र के बजट आवंटन पर कटाक्ष किया",
-    },
-    {
-      id: "5",
-      text: "NEET पर SC के फैसले के बाद क्या राहुल गांधी माफी मांगेंगे: बीजेपी",
-    },
-    {
-      id: "6",
-      text: "कांग्रेस ने आंध्र के लिए केंद्र के बजट आवंटन पर कटाक्ष किया",
-    },
-    {
-      id: "7",
-      text: "बीजेपी ने त्रिपुरा की 70% पंचायत सीटें निर्विरोध हासिल कर लीं",
-    },
-  ];
-
-  const rajneetiBoxData = [
-    {
-      id: 1,
-      src: "/assets/bhajpa.png",
-      altt: "भाजपा",
-      title: "भाजपा",
-      titleTextSize: "text-[16px]",
-      description: "झारखंड बीजेपी के 18 विधायक विधानसभा से निलंबित",
-      descriptionTextSize: "text-[18px]",
-      fontWeightt: "font-semibold",
-      description2:
-        "झारखंड के अठारह भाजपा विधायकों को 2 अगस्त को दोपहर 2 बजे तक विधानसभा से निलंबित कर दिया गया",
-      description2TextSize: "text-[14px]",
-      fontWeightt2: "font-normal",
-      subHeading: "आस्था प्रज्वल",
-      date: "Jul 31",
-    },
-    {
-      id: 2,
-      src: "/assets/raksha.png",
-      altt: "रक्षा",
-      title: "रक्षा",
-      titleTextSize: "text-[16px]",
-      description: "हिंसा प्रभावित मणिपुर में नई राजनीति पार्टी",
-      descriptionTextSize: "text-[18px]",
-      fontWeightt: "font-semibold",
-      description2:
-        "झारखंड के अठारह भाजपा विधायकों को 2 अगस्त को दोपहर 2 बजे तक विधानसभा से निलंबित कर दिया गया",
-      description2TextSize: "text-[14px]",
-      fontWeightt2: "font-normal",
-      subHeading: "आस्था प्रज्वल",
-      date: "Jul 31",
-    },
-  ];
+  
 
   return (
     <div>

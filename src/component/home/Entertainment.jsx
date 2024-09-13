@@ -1,66 +1,9 @@
 import React from "react";
 import Box from "../Box";
 import MainHeading from "../MainHeading";
+import { EntertainmentArray, EntertainmentNewsItems } from "../../data/data";
 
 const Entertainment = () => {
-  const EntertainmentArray = [
-    {
-      id: 1,
-      borderr: true,
-      borderColor: "border-[2px] border-primaryPurple p-2 rounded-lg",
-      src: "/assets/Entertainment1.png",
-      altt: "sports",
-      title: "बॉलीवुड",
-      titleTextSize: "text-[16px]",
-      description: "रिव्यू - औरों में कहां दम था",
-      descriptionTextSize: "text-[20px]",
-      fontWeightt: "font-semibold",
-      description2:
-        "अजय देवगन और Tabu की फिल्म Auron Mein Kahan Dum Tha में कितना दम है?",
-      description2TextSize: "text-[16px]",
-      fontWeightt2: "font-normal",
-      subHeading: "आस्था प्रज्वल",
-      date: "Jul 31",
-    },
-    {
-      id: 2,
-      borderr: true,
-      borderColor: "border-[2px] border-primaryPurple p-2 rounded-lg",
-      src: "/assets/Entertainment2.png",
-      altt: "sports",
-      title: "बॉलीवुड",
-      titleTextSize: "text-[16px]",
-      description: "सलमान खान इंडस्ट्री के मसीहा हैं-निखिल अडवाणी",
-      descriptionTextSize: "text-[20px]",
-      fontWeightt: "font-semibold",
-      description2:
-        "डायरेक्टर निखिल अजानी ने बताया, Karan Johar से अनबन होने के बाद Salman Khan ने कॉल किया. कहा,",
-      description2TextSize: "text-[16px]",
-      fontWeightt2: "font-normal",
-      subHeading: "आस्था प्रज्वल",
-      date: "Jul 31",
-    },
-  ];
-
-  const EntertainmentNewsItems = [
-    {
-      id: 1,
-      text: "जब 'दिल से' के सेट पर मणि रत्नम ने मनीषा की कमी छुपाने के लिए सीता को डंक दिया",
-    },
-    {
-      id: 2,
-      text: "दी सिनेमा शो: मार्वल में वापसी के लिए रॉबर्ट डाउनी जूनियर की फीस और शर्तें आपका दिमाग घुमा देंगी |",
-    },
-    {
-      id: 3,
-      text: "डेविड धवन ने सलमान, गोविंदा की Partner का किस्सा सुनाया, क्या खुलासा कर दिया?",
-    },
-    {
-      id: 4,
-      text: "सनी देओल की सबसे बड़ी वार फिल्म 'बॉर्डर 2' में दिलजीत दोसांझ की एंट्री!",
-    },
-  ];
-
   return (
     <div>
       <div>
@@ -102,9 +45,11 @@ const Entertainment = () => {
         <div className="flex gap-4 flex-col">
           <div className="flex flex-row gap-8">
             {EntertainmentArray?.map((entertain) => (
-              <div className="flex-1 rounded-md max-w-[21rem] flex flex-row gap-2">
+              <div
+                key={entertain.id}
+                className="flex-1 rounded-md max-w-[21rem] flex flex-row gap-2"
+              >
                 <Box
-                  key={entertain.id}
                   borderr={entertain.borderr}
                   borderColor={entertain.borderColor}
                   src={entertain.src}
@@ -141,7 +86,7 @@ const Entertainment = () => {
               </div>
             ))}
           </div>
-        </div>  
+        </div>
       </div>
     </div>
   );

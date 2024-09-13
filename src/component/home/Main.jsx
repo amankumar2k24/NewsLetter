@@ -1,31 +1,6 @@
 import React from "react";
 import Box from "../Box";
-
-const contentArray = [
-  {
-    id: 1,
-    title: "भारत की पॉलिटिक्स",
-    description:
-      '"लोकसभा चुनाव में नहीं हुई इतने लाख वोटों की गिनती"- इस संस्था के दावे के बाद बवाल तय है',
-  },
-  {
-    id: 2,
-    title: "खेल",
-    description: "गौतम गंभीर आए और टीम इंडिया छा गई, लोग बोले GG का दौर शुरू!",
-  },
-  {
-    id: 3,
-    title: "बजट 2024",
-    description:
-      "क्रेडिट कार्ड से लेकर रसोई गैस और CNG की कीमतों तक, जाने ये पांच बदलाव आपकी जेब पर कितना असर डालेंगे",
-  },
-];
-
-export const colorItems = [
-  { id: "0", color: "#F3D366", value: 0 },
-  { id: "1", color: "#B1B1B1", value: 0 },
-  { id: "2", color: "#AB8A82", value: 3 },
-];
+import { colorItems, contentArray } from "../../data/data";
 
 const Main = () => {
   return (
@@ -37,7 +12,7 @@ const Main = () => {
           className="w-[160px] h-auto rounded-md mb-4"
         />
         <div className="space-y-4 px-8 text-center">
-          {contentArray.map((item) => (
+          {contentArray?.map((item) => (
             <div key={item.id}>
               <p className="text-sm font-semibold text-primaryGray">
                 {item.title}
@@ -69,7 +44,7 @@ const Main = () => {
         <div className="bg-white p-6 rounded-md text-[34px] font-bold shadow-md">
           <h2 className="pt-2">भारत इन ओलंपिक</h2>
           <div className="flex flex-row gap-6">
-            {colorItems.map((item, index) => (
+            {colorItems?.map((item, index) => (
               <div
                 key={item.id}
                 className="flex flex-row gap-2 justify-center items-center"

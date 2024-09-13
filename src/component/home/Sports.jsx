@@ -2,99 +2,9 @@ import React from "react";
 import MainHeading from "../MainHeading";
 import Box from "../Box";
 import ImgHolder from "../ImgHolder";
+import { medalWinners, sportsArticlesArray } from "../../data/data";
 
 const Sports = () => {
-  const sportsArticlesArray = [
-    {
-      id: 1,
-      borderr: true,
-      borderColor: "border-[2px] border-primarySky p-2 rounded-lg",
-      src: "/assets/sport1.png",
-      altt: "sports",
-      title: "ओलंपिक 2024",
-      titleTextSize: "text-[16px]",
-      description: "भारतीय पुरुष हॉकी को बेल्जियम के खिलाफ पहली हार का सामना",
-      descriptionTextSize: "text-[20px]",
-      fontWeightt: "font-semibold",
-      description2:
-        "अभिषेक ने 18वें मिनट में भारत को बढ़त दिलायी जिसके बाद बेल्जियम ने हाफ टाइम के",
-      description2TextSize: "text-[16px]",
-      fontWeightt2: "font-normal",
-      subHeading: "आस्था प्रज्वल",
-      date: "Jul 31",
-    },
-    {
-      id: 2,
-      borderr: true,
-      borderColor: "border-[2px] border-primarySky p-2 rounded-lg",
-      src: "/assets/sport2.png",
-      altt: "sports",
-      title: "ओलंपिक 2024",
-      titleTextSize: "text-[16px]",
-      description:
-        "होने वाली मां-तलवारबाजी स्टार ने ओलंपिक में सभी बाधाओं को हराया",
-      descriptionTextSize: "text-[20px]",
-      fontWeightt: "font-semibold",
-      description2:
-        "मिस की फ्रेंच माजा होवदां पेरिस 2024 ओलंपिक में साल महंगी की गर्भवती रहते हुए",
-      description2TextSize: "text-[16px]",
-      fontWeightt2: "font-normal",
-      subHeading: "आस्था प्रज्वल",
-      date: "Jul 31",
-    },
-    {
-      id: 3,
-      borderr: true,
-      borderColor: "border-[2px] border-primarySky p-2 rounded-lg",
-      src: "/assets/sport3.png",
-      altt: "sports",
-      title: "ओलंपिक 2024",
-      titleTextSize: "text-[16px]",
-      description:
-        "मेरे को ये बेट देगा क्या? सचिन का ये किस्सा सुनकर दंग रह जाएंगे आप!",
-      descriptionTextSize: "text-[20px]",
-      fontWeightt: "font-semibold",
-      description2: "जड़ा भगवान ने किया टेबल के खेल पांच बल्लों का सौदा",
-      description2TextSize: "text-[16px]",
-      fontWeightt2: "font-normal",
-      subHeading: "आस्था प्रज्वल",
-      date: "Jul 31",
-    },
-  ];
-
-  const medalWinners = [
-    {
-      id: 1,
-      name: "मनु भाकर",
-      event: "10 मीटर शूटिंग",
-      imageSrc: "/assets/padak1.png",
-      altText: "Manu Bhaker",
-      borderClass: "border-4 border-[#CC8C47]",
-      textClass: "font-semibold text-[18px]",
-      descriptionClass: "text-[#5D5D5D]",
-    },
-    {
-      id: 2,
-      name: "स्वप्निल कुसाले",
-      event: "50 मीटर शूटिंग",
-      imageSrc: "/assets/padak2.png",
-      altText: "Swapnil Kusale",
-      borderClass: "border-4 border-[#CC8C47]",
-      textClass: "font-semibold text-[18px]",
-      descriptionClass: "text-[#5D5D5D]",
-    },
-    {
-      id: 3,
-      name: "मनु भाकर - सरबजोत सिंह",
-      event: "टीम 10 मीटर शूटिंग",
-      imageSrc: "/assets/padak3.png",
-      altText: "Manu Bhaker and Sarabjot Singh",
-      borderClass: "border-4 border-[#CC8C47]",
-      textClass: "font-semibold text-[18px]",
-      descriptionClass: "text-[#5D5D5D]",
-    },
-  ];
-
   return (
     <div>
       <div>
@@ -185,9 +95,11 @@ const Sports = () => {
           </div>
           <div className="flex flex-row gap-16">
             {sportsArticlesArray?.map((article) => (
-              <div className="flex-1 rounded-md max-w-[18rem] flex flex-row gap-2">
+              <div
+                key={article.id}
+                className="flex-1 rounded-md max-w-[18rem] flex flex-row gap-2"
+              >
                 <Box
-                  key={article.id}
                   borderr={article.borderr}
                   borderColor={article.borderColor}
                   src={article.src}

@@ -1,39 +1,9 @@
 import React from "react";
 import Box from "../Box";
 import ImgHolder from "../ImgHolder";
+import { videoData } from "../../data/data";
 
 const Video = () => {
-  const videoData = [
-    {
-      id: 1,
-      src: "/assets/video1.png",
-      altt: "video1",
-      description: "पीएम मोदी ने कहा, श्रीनगर में मतदान लोकसभा चुनाव का",
-      descriptionTextSize: "20px",
-      fontWeightt: "font-semibold",
-      youtubeIcon: true,
-    },
-    {
-      id: 2,
-      src: "/assets/video2.png",
-      altt: "video2",
-      description:
-        "टीडीपी आंध्र चुनाव में वर्चस्व के लिए एनडीए के साथ गठबंधन पर",
-      descriptionTextSize: "20px",
-      fontWeightt: "font-semibold",
-      youtubeIcon: true,
-    },
-    {
-      id: 3,
-      src: "/assets/video3.png",
-      altt: "video3",
-      description: "राजनाथ सिंह ने कहा, बीजेपी कभी भी आरक्षण खत्म नहीं करेगी य",
-      descriptionTextSize: "20px",
-      fontWeightt: "font-semibold",
-      youtubeIcon: true,
-    },
-  ];
-
   return (
     <div className="px-16">
       <div className="w-full flex flex-row gap-12 ">
@@ -66,7 +36,7 @@ const Video = () => {
           <img src="/assets/arrow.png" alt="arrow" />
         </div>
         <div className="flex flex-row gap-16">
-          {videoData.map((video) => (
+          {videoData?.map((video) => (
             <div
               key={video.id}
               className="flex-1 rounded-md max-w-[16rem] flex flex-row gap-2"
